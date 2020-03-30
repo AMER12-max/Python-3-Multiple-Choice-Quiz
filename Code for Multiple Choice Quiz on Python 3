@@ -1,0 +1,25 @@
+# Multiple Choice Quiz Python 3
+questions1 = input('Red\nGreen\nBlue\nWhat colour are apples:')
+questions2 = input('Blue\nPurple\nOrange\nWhat colour is the sky:')
+questions3 = input('Rainbow\nBlack\nMagenta\nWhat color is a black pen:')
+current_score = 0
+max_score = 3
+def quiz():
+    # Setting current_score as a global variable so we can use it inside the function
+    global current_score
+    print(questions1)
+    if questions1 == 'Red' or 'red':
+        current_score += 1
+        print(questions2)
+    else:
+        print(questions2)
+    if questions2 == 'Blue' or 'blue':
+        current_score += 1
+        print(questions3)
+    else:
+        print(questions3)
+    if  questions3 == 'Black' or 'black':
+        current_score += 1
+    
+quiz()
+print('You got ' + str(current_score) + ' out of ' + str(max_score))
